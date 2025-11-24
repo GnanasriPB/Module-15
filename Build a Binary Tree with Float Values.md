@@ -19,11 +19,18 @@ To write a Python program to build a binary tree with a root, left, and right no
 ## PYTHON PROGRAM
 
 ```
-ENTER YOUR CODE
+import heapq
+
+def heaptree(H):
+
+heapq.heapify(H)
+print("The created Heap is",H)
 ```
 
 ## OUTPUT
-```
-```
+<img width="1220" height="453" alt="image" src="https://github.com/user-attachments/assets/5f21995a-b36d-4486-815c-976a0bedc69e" />
+
+
 
 ## RESULT
+Thus, a Python program to build a heap tree using appropriate Python package and function was implemented successfully.
