@@ -19,50 +19,19 @@ To write a Python program to build a heap tree using appropriate Python package 
 ## PROGRAM:
 
 ```
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+import heapq
 
-def isLeaf(node):
-    return node.left is None and node.right is None
- 
-def process(op, x, y):
-    if op == '+':
-        return x + y
-    if op == '-':
-        return x - y
-    if op == '*':
-        return x * y
-    if op == '/':
-        return x / y
- 
-def evaluate(root):
- # Write your code here
- 
+def heaptree(H):
 
-    if root is None:
-        return 0
-  
-    if isLeaf(root):
-        return float(root.val)
-    
-    x = evaluate(root.left)
-    y = evaluate(root.right)
-    return (process(root.val, x, y))
-
-root = Node('+')
-root.left = Node('*')
-root.right = Node(3)
-root.left.left = Node(4)
-root.left.right = Node(8)
-print('The value of the expression tree is',evaluate(root))
+heapq.heapify(H)
+print("The created Heap is",H)
 ```
 
 ## OUTPUT
+<img width="985" height="368" alt="image" src="https://github.com/user-attachments/assets/13cb9686-99b1-4444-a294-c98887fb260d" />
 
-<img width="822" height="131" alt="image" src="https://github.com/user-attachments/assets/0d489344-5e9d-4dc6-8d4c-d55544d319e3" />
+
+
 
 ## RESULT
-Thus, a Python program to build and evaluate the given Expression tree was implemented successfully.
+Thus, a Python program to build a heap tree using appropriate Python package and function was implemented successfully.
